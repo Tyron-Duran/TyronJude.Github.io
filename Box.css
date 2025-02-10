@@ -1,0 +1,70 @@
+body {
+
+    align-items: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    }
+    
+    .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    }
+    
+    .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    }
+    
+    .daybtn {
+    
+    font-size: 36px;
+    cursor: pointer;
+    width: 320px;
+    padding: 10px;
+    border: black;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    }
+    
+    .daybtn:hover {
+    transform: scale(1.05);
+    }
+    
+    
+    .daybtn:nth-child(1) { background-color: purple; }
+    .daybtn:nth-child(2) { background-color: pink; color: black; }
+    .daybtn:nth-child(3) { background-color: blue; }
+    .daybtn:nth-child(4) { background-color: green; }
+    .daybtn:nth-child(5) { background-color: yellow; color: black; }
+    .daybtn:nth-child(6) { background-color: orange; }
+    .daybtn:nth-child(7) { background-color: red; }
+    
+    .box-container {
+    position: relative;
+    width: 750px;
+    height: 750px;
+    border: 2px solid lightgray;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    }
+    
+    .animated-box {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -120px;
+    background-color: transparent;
+    border: 12px solid transparent;
+    transition: top 1s ease-in-out, background-color 0.5s ease-in-out 1s;
+    }
