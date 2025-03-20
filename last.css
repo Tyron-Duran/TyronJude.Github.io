@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('hearts.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 182, 193, 0.8); /* Light pink with transparency */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Frame */
+.image-frame {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-frame:hover {
+    transform: rotate(3deg) scale(1.05);
+}
+
+/* Cute Cat Image */
+.proposal-img {
+    width: 220px;
+    border-radius: 15px;
+    border: 4px solid #ff9aa2; /* Soft red-pink */
+    animation: bounce 1.5s infinite alternate ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Wiggle Effect on Hover */
+.proposal-img:hover {
+    transform: rotate(-3deg);
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+/* Text Box */
+.text-box {
+    background: #ff6b81; /* Deep pink */
+    color: white;
+    padding: 20px 50px;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.text-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Yes Button */
+.yes-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 45px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: #ff4757; /* Soft red */
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.yes-btn:hover {
+    background: #e84148;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Floating Hearts Animation */
+body::before {
+    content: "❤️ ❤️ ❤️ ❤️ ❤️";
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floaty 3s infinite alternate ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes floaty {
+    from { transform: translateX(-50%) translateY(0); }
+    to { transform: translateX(-50%) translateY(-10px); }
+}
+
+
+

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('hearts.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    color: #4a2c2a;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    gap: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    border: 5px solid #b35a5a;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Text Section */
+.text-section {
+    flex: 1.2;
+    background: linear-gradient(135deg, #b35a5a, #ff7675);
+    color: white;
+    padding: 60px 50px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.text-section:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.text-section h1 {
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-section h1:hover {
+    transform: scale(1.05);
+}
+
+/* Highlight */
+
+/* Paragraph */
+.text-section p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 80%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-section p:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.button {
+    padding: 14px 36px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.button::before {
+    content: "✨";
+    font-size: 16px;
+    animation: twinkle 1.5s infinite;
+}
+
+.button::after {
+    content: "💖";
+    font-size: 16px;
+    animation: twinkle 1.5s infinite;
+}
+
+/* Keyframes */
+@keyframes twinkle {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.6; }
+}

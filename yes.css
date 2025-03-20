@@ -1,0 +1,138 @@
+body {
+    background-color: #ffccf9;
+    font-family: 'Arial', sans-serif;
+    background: url('hearts.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* FADE-IN EFFECT */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    animation: popIn 0.5s ease-in-out;
+}
+
+/* POP-IN EFFECT */
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.container:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* HEADINGS */
+h1 {
+    color: #ff1493;
+    font-size: 2.8rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: bounce 1.5s infinite alternate;
+}
+
+h1:hover {
+    color: #ff66b2;
+    transform: scale(1.1);
+}
+
+/* BOUNCE EFFECT */
+@keyframes bounce {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(10px); }
+}
+
+/* TEXT */
+p {
+    font-size: 22px;
+    color: #444;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+p:hover {
+    color: #ff3385;
+    transform: scale(1.05);
+}
+
+/* IMAGES */
+img {
+    width: 280px;
+    height: auto;
+    margin: 20px 0;
+    transition: transform 0.4s ease-in-out;
+    animation: popIn 0.8s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* MASSIVE FLOATING GIFs */
+.gif-container {
+    position: absolute;
+    width: 550px; /* EVEN BIGGER */
+    height: auto;
+    opacity: 1;
+    z-index: 1;
+    animation: float 3s infinite alternate ease-in-out, fadeIn 1s ease-in-out;
+}
+
+/* FLOATING EFFECT */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(15px) rotate(5deg); }
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gif-container img:hover {
+    transform: scale(1.15);
+}
+
+/* PLACEMENT FOR GIFs */
+.top-left { top: 20px; left: 20px; transform: rotate(-10deg); }
+.top-right { top: 20px; right: 20px; transform: rotate(10deg); }
+.bottom-left { bottom: 20px; left: 20px; transform: rotate(15deg); }
+.bottom-right { bottom: 20px; right: 20px; transform: rotate(-15deg); }
+
+/* BUTTON */
+button {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 20px;
+    animation: popIn 0.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff3385;
+    transform: scale(1.15);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
